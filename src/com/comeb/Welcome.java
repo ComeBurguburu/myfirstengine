@@ -17,7 +17,7 @@ public class Welcome extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		
 		String login = req.getParameter("login");
 		try{
 		DatastoreService dsf = DatastoreServiceFactory.getDatastoreService();

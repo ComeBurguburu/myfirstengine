@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://java.sun.com/xml/ns/javaee"
-xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
 	<servlet>
 		<servlet-name>Myfirstengine</servlet-name>
 		<servlet-class>com.comeb.MyfirstengineServlet</servlet-class>
@@ -21,12 +21,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-class>com.comeb.MemoryCache</servlet-class>
 	</servlet>
 	<servlet>
-	    <servlet-name>delete</servlet-name>
-	    <servlet-class>com.comeb.deleteServlet</servlet-class>
+		<servlet-name>delete</servlet-name>
+		<servlet-class>com.comeb.deleteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Channel</servlet-name>
+		<servlet-class>com.comeb.TokenChannelGeneratorServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-	    <servlet-name>delete</servlet-name>
-	    <url-pattern>/delete</url-pattern>
+		<servlet-name>delete</servlet-name>
+		<url-pattern>/delete</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>Queue</servlet-name>
@@ -40,8 +44,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Test</servlet-name>
 		<url-pattern>/test</url-pattern>
 	</servlet-mapping>
-	
-	
+
+
 	<servlet-mapping>
 		<servlet-name>Welcome</servlet-name>
 		<url-pattern>/welcome</url-pattern>
@@ -51,11 +55,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>MemoryCache</servlet-name>
 		<url-pattern>/memorycache</url-pattern>
 	</servlet-mapping>
-	
-	
+
+
 	<servlet-mapping>
 		<servlet-name>Queue</servlet-name>
 		<url-pattern>/queue</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Channel</servlet-name>
+		<url-pattern>/token</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

@@ -26,15 +26,12 @@ public class MemoryCache extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doPost(req, resp);
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		
 		javax.cache.Cache cache=null;
 		Map props = new HashMap();
 		props.put(GCacheFactory.EXPIRATION_DELTA, 3600);
